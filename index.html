@@ -202,7 +202,8 @@ function pool(lang){const l=lang||state.tab;return ROWS.filter(r=>r.lang===l)}
 function buildSelects(){
   const p=pool(),seen=new Set(),cats=[];
   p.forEach(r=>{if(r.cat&&!seen.has(r.catId)){seen.add(r.catId);cats.push(r)}});
-  $("#cat").innerHTML=`<option value="">All series and themes (${cats.length})</option>`+cats.map(r=>`<option value="${r.catId}">${esc(r.cat)}${r.catT?" · "+esc(r.catT):""}</option>`).join("");
+  const isBh=r=>/भजन|ଭଜନ/.test(r.cat); cats.sort((x,y)=>isBh(y)-isBh(x)); /* bhajans first */
+  $("#cat").innerHTML=`<option value="">All series and themes (${cats.length})</option>`+cats.map(r=>`<option value="${r.catId}">${isBh(r)?"Bhajans · ":""}${esc(r.cat)}${r.catT?" · "+esc(r.catT):""}</option>`).join("");
   $("#cat").value=state.cat;
   const yrs=[...new Set(p.map(r=>r.year).filter(Boolean))].sort().reverse();
   $("#year").innerHTML=`<option value="">Any year</option>`+yrs.map(y=>`<option>${y}</option>`).join("");
