@@ -1,4 +1,4 @@
-# Vāṇī Sampuṭa
+# Vāṇī Saṃpuṭa
 
 Catalogue of the recorded lectures and bhajans of **His Holiness Haladhar Swami Mahārāja** in English, Hindi and Odia.
 
