@@ -1,6 +1,6 @@
 # Vāṇī Saṃpuṭa
 
-Catalogue of the recorded lectures and bhajans of **His Holiness Haladhar Swami Mahārāja** in English, Hindi and Odia.
+Catalogue of the recorded lectures and bhajans of **His Holiness Haladhara Svāmī Mahārāja** in English, Hindi and Odia.
 
 Open the catalogue: https://spandanghoshal.github.io/vani-samputa/
 
